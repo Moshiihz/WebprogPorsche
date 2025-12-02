@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Porsche Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: center;
+      padding: 110px 6vw 80px;
+      background-image: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("https://w0.peakpx.com/wallpaper/444/619/HD-wallpaper-porsche-in-black-porsche-cars-black.jpg");
+      background-size: cover;
+      background-position: center;
+      color: var(--text);
+      transition: background 0.4s ease;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 86px);
+      margin: 0 0 12px 0;
+      line-height: 0.95;
+      color: var(--text);
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .specs {
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+      border-radius: 14px;
+      color: var(--muted);
+    }
+
+    @media (max-width:900px){
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 140px 5vw 70px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body style="background:var(--bg);">
+
+<nav class="site-nav" style="background:black;">
+  <div class="nav-left">
+    <a class="brand" href="index.html">Porsche</a>
+  </div>
+  <div class="nav-right">
+    <a href="models.html" class="nav-item">Models</a>
+    <a href="services.html" class="nav-item">Services</a>
+    <a href="dealer.html" class="nav-item">Find a dealer</a>
+    <a href="about.html" class="nav-item">About</a>
+    <button class="nav-item contact-btn" onclick="openContact()">Contact</button>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1 style="color:white;">PORSCHE 911</h1>
+      <p style="color:#ccc;">
+        Engineered for precision and shaped by decades of motorsport heritage.
+        The Porsche 911 blends power, balance, and unmistakable style.
+      </p>
+
+      <button class="btn-primary" onclick="goModels()">View Models</button>
+    </div>
+
+    <aside class="specs">
+      <h4 style="color:white;">Quick Specs</h4>
+      <p>• Twin-Turbo Engine</p>
+      <p>• 0–100 km/h in 3.2s</p>
+      <p>• Top Speed: 330 km/h</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>© Porsche Demo Website</div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
